@@ -59,8 +59,8 @@ server "www.lwd369.com", user: "lwd369", roles: %w{app db web}
 #     # password: "please use keys"
 #   }
 
-set :deploy_to, '/var/www/deploy_sample'
-set :puma_bind, %w(unix:///var/www/deploy_sample/shared/tmp/sockets/puma.sock)
+set :deploy_to, '/var/www/blog'
+set :puma_bind, %w(unix:///var/www/blog/shared/tmp/sockets/puma.sock)
 set :puma_threads, [1,1]
 set :puma_workers, 1
 set :puma_preload_app, false
