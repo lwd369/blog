@@ -72,7 +72,7 @@ set :port, 22
 #   task :rollback_database do
 #     on roles(:app) do
 #       within release_path do
-#         execute :rake, 'db:rollback'
+#         execute :rake, 'db:reset RAILS_ENV=production'
 #       end
 #     end
 #   end
