@@ -68,14 +68,14 @@ set :nginx_sites_available_path, '/etc/nginx/sites-available'
 set :nginx_sites_enable_path, '/etc/nginx/sites-enabled'
 set :port, 22
 
-namespace :deploy do
-  task :rollback_database do
-    on roles(:app) do
-      within release_path do
-        execute :rake, 'db:rollback'
-      end
-    end
-  end
+# namespace :deploy do
+#   task :rollback_database do
+#     on roles(:app) do
+#       within release_path do
+#         execute :rake, 'db:rollback'
+#       end
+#     end
+#   end
 
-  after :migrate, :rollback_database
-end
+#   before :migrate, :rollback_database
+# end
